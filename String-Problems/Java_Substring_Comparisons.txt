@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static String getSmallestAndLargest(String s, int n) {
+        String temp = "";
+        String[] str = new String[s.length() - n + 1];
+        for (int i = 0; i < s.length() - n + 1; i++) {
+            str[i] = s.substring(i, i + n);
+        }
+        for (int i = 0; i < str.length; i++) {
+            for (int j = i + 1; j < str.length; j++) {
+                if (str[i].compareTo(str[j]) > 0) {
+                    temp = str[i];
+                    str[i] = str[j];
+                    str[j] = temp;
+                }
+            }
+        }
+        String smallest = str[0];
+        String largest = str[str.length-1];
+        
+      
+        return smallest + "\n" + largest;
+    }
+
+

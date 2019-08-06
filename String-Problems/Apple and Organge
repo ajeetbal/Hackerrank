@@ -1,0 +1,22 @@
+ static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
+int countA = 0, countO = 0;
+       for (int i = 0; i < apples.length; i++) {
+            if (apples[i] > 0) {
+
+                if (apples[i] >= s - a && apples[i] + a <= t) {
+                    countA++;
+
+                }
+            }
+        }
+        for (int i = 0; i < oranges.length; i++) {
+            if (oranges[i] < 0) {
+                if (oranges[i] + b <= t && s <= oranges[i] + b) {
+                    countO++;
+                }
+            }
+        }
+        System.out.print(countA + "\n" + countO);
+    
+
+    }

@@ -1,0 +1,11 @@
+static void miniMaxSum(int[] a) {
+       BigInteger sum=BigInteger.ZERO;
+        Arrays.sort(a);
+        for(int i=0;i<a.length;i++) {
+            sum=sum.add(BigInteger.valueOf(a[i]));
+        }
+    
+        
+        System.out.println(sum.subtract(BigInteger.valueOf(a[a.length-1]))+" "+ sum.subtract(BigInteger.valueOf(a[0])));
+
+    }

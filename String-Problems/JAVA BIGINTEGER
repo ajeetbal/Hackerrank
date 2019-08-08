@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+import java.math.BigInteger;
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        BigInteger b1,b2;
+        b1=scan.nextBigInteger();
+        b2=scan.nextBigInteger();
+        
+        System.out.println(b1.add(b2)+"\n"+b1.multiply(b2));
+        scan.close();
+    }
+}
+

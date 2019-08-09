@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        List<List<Integer>> upper = new ArrayList<>();
+        while (n-- > 0) {
+            int d = scan.nextInt();
+            List<Integer> l = new ArrayList<Integer>();
+            while (d-- > 0) {
+                l.add(scan.nextInt());
+            }
+            upper.add(l);
+
+        }
+    
+
+        int q = scan.nextInt();
+        while (q-- > 0) {
+            int x = scan.nextInt();
+            int y = scan.nextInt();
+            if (upper.get(x - 1).size() >= y) {
+                System.out.println(upper.get(x - 1).get(y - 1));
+            }
+            else {
+                System.out.println("ERROR!");
+            }
+        }
+        scan.close();
+    }
+}
+

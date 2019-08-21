@@ -9,30 +9,9 @@ public class Solution {
     /*
      * Complete the gameWithCells function below.
      */
-    static int gameWithCells(int row, int col) {
-        int result=0;
-        if (row % 2 == 0 && col % 2 == 0) {
-            result = (row * col) / 4;
-        } else {
-            if ((row % 2 == 1 && col % 2 == 0)) {
-                result = (((row -1) * col)/4)+col/2;
-                
-            } 
-            
-            else if((row % 2 == 0 && col % 2 == 1)) {
-              result = ((row * (col - 1)) / 4) + row / 2;
-            }
-            
-            else {
-               result = (row + 1) * (col + 1)/4;
-            }
-        }
-       return result;
-       
-
+     static int gameWithCells(int n, int m) {
+      return (n/2 + n%2) * (m/2 + m%2);
     }
-
-    
 
     private static final Scanner scanner = new Scanner(System.in);
 
